@@ -1,0 +1,54 @@
+<header class="sectionTitle">
+    <h1 class="wrapText" id="postID" value="{{id}}">{{title}}</h1>
+</header>
+<div class="container">
+    <div class="card">
+        <header class="card-header">
+            <p class="card-header-title">
+                {{user.name}} posted on {{createdAt}}
+            </p>
+        </header>
+    </div>
+    <div class="card-content">
+        <p class="content wrapText">
+            {{content}}
+        </p>
+    </div>
+</div>
+
+{{#if loggedIn}}
+<input class="buttonBlue" type="button" id="commentButton" value="  Add Comment  ">
+{{/if}}
+
+<div class="hidden" id="commentScreen">
+    <!-- Content Input -->
+    <label class="boldLabel" for="commentBody">Comment</label>
+    <textarea class="textInput" id="commentBody" name="commentBody" rows="4"
+        placeholder="Write something..."></textarea>
+    <input class="buttonBlue" type="button" id="submitComment" value="    Submit!    ">
+</div>
+
+<div class="padded container">
+    {{#each comments as |comment|}}
+    <div class="container">
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    {{user.name}} commented on {{createdAt}}
+                </p>
+            </header>
+        </div>
+        <div class="card-content">
+            <p class="content wrapText">
+                {{content}}
+            </p>
+        </div>
+    </div>
+    <hr>
+    {{/each}}
+</div>
+
+{{!-- Javascripts --}}
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}

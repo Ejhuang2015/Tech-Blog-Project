@@ -1,0 +1,34 @@
+{
+  "name": "Tech-Blog",
+  "version": "1.0.0",
+  "description": "![GNU License](https://img.shields.io/badge/License-GNU-blue)",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-openid-connect": "^2.3.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-auth0": "^1.4.0",
+    "sequelize": "^6.5.1",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ejhuang2015/Tech-Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ejhuang2015/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/Ejhuang2015/Tech-Blog#readme"
+}

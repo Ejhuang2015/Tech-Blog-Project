@@ -1,0 +1,66 @@
+<header class="sectionTitle">
+    <h1>Dashboard</h1>
+</header>
+<!-- View User's Posts -->
+<div id="viewScreen">
+    {{#each posts as |post|}}
+    <div class="container">
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title truncateText">
+                    {{title}}
+                </p>
+                <input class="buttonBlue alignRight editPostButton" data-value="{{id}}" type="button"
+                    value="    Edit    ">
+                <input class="buttonBlue alignRight deletePostButton" data-value="{{id}}" type="button"
+                    value="    Delete   ">
+            </header>
+        </div>
+        <div class="card-content">
+            <p class="content wrapText">
+                {{content}}
+            </p>
+        </div>
+    </div>
+    {{/each}}
+    <input class="buttonBlue" type="button" id="createPost" value="  Create a Post!  ">
+</div>
+
+<!-- Create New/Edit Post Screen -->
+<div class="hidden" id="editScreen" data-value="">
+    <div class="container">
+        <form class="column">
+            <!-- Title Input -->
+            <label class="boldLabel" for="postTitle">Post Title</label>
+            <input class="textInput" type="text" id="postTitle" name="postTitle" placeholder="Your post's title">
+        </form>
+        <form class="column">
+            <!-- Content Input -->
+            <label class="boldLabel" for="postBody">Post Body</label>
+            <textarea class="textInput" id="postBody" name="postBody" rows="4"
+                placeholder="Write something..."></textarea>
+        </form>
+        <input class="buttonBlue hidden" type="button" id="postSubmitEdit" value="    Submit    ">
+        <input class="buttonBlue hidden" type="button" id="postSubmit" value="    Post!    ">
+    </div>
+    <input type="button" class="buttonBlue" id="backButton" value="    Back    ">
+</div>
+
+<!-- Confirmation modal -->
+<div class="modal" id="confirmationModal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Delete Post?</p>
+            <button class="delete modalClose" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <p>Are you sure you want to delete this post?</p>
+            <input type="button" class="buttonBlue" id="confirmDelete" value="    Delete    ">
+            <input type="button" class="buttonBlue" id="goBack" value="    Go Back    ">
+        </section>
+    </div>
+</div>
+
+{{!-- Javascripts --}}
+<script src="/js/dashboard.js"></script>

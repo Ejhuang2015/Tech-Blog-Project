@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="A tech blog for practice purposes">
+
+    <!-- Reset CSS -->
+    <link href="/css/reset.css" rel="stylesheet">
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/lightBlueStyle.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="./assets/images/Signature.png"> -->
+
+    <title>Tech Blog</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <!-- Burger Menu -->
+            <a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <!-- Navigation Links Left Side -->
+            <div class="navbar-start">
+                <!-- Home Link -->
+                <a href="/" class="navbar-item navLink">Home</a>
+                <!-- Dashboard Link -->
+                <a href="/dashboard" class="navbar-item navLink">Dashboard</a>
+                {{#if loggedIn}}
+                <!-- Login/logout Link -->
+                <a href="/logout" class="navbar-item navLink">Log out</a>
+                {{else}}
+                <a href="/login" class="navbar-item navLink">Log in</a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+
+    <main class="centered">
+        {{{body}}}
+    </main>
+
+    <!-- Timeout modal -->
+    <div class="modal" id="timeoutModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Logout Warning</p>
+                <button class="delete modalClose" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>Due to inactivity, you will be logged out soon unless user activity is detected.</p>
+            </section>
+        </div>
+    </div>
+
+</body>
+{{!-- Javascripts --}}
+    {{!-- Navbar, modal --}}
+    <script src="/js/main.js"></script>
+{{!-- If logged in, start a timeout countdown --}}
+{{#if loggedIn}}
+    <script src="/js/logoutTimer.js"></script>
+{{/if}}
+
+</html>

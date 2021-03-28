@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Music Near Me",
+        "content": "A mobile app that will send you notifications whenever a concert is playing in your area.",
+        "user_id": "auth0|605bf1422cdd3e0069c5c60d"
+    },
+    {
+        "title": "Something about art",
+        "content": "Its a community art gallery or something. Buy and sell local art pieces or just find people who like your art or people whose art you like.",
+        "user_id": "auth|2894657"
+    },
+    {
+        "title": "Lunch break isn't long enough",
+        "content": "Just quit your day job and your lunch break is extended up to 12 hours! Simple, easy, and fast! Extend your lunch break today!",
+        "user_id": "auth|309467"
+    }
+]

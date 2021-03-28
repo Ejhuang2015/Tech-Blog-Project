@@ -1,0 +1,163 @@
+<!-- Home -->
+<header class="sectionTitle">
+    <h1>All posts</h1>
+</header>
+<!-- {{#each blogPosts}} -->
+<div class="container">
+    <div class="card">
+        <header class="card-header">
+            <p class="card-header-title">
+                <!-- {{blogPost.title}} -->
+                This is the blog post title
+            </p>
+        </header>
+    </div>
+    <div class="card-content">
+        <p class="content">
+            <!-- {{blogPost.content}} -->
+            This is the content of the blog post
+        </p>
+    </div>
+</div>
+<!-- {{/each}} -->
+<!-- End of Home -->
+
+<!-- Post -->
+<div class="container">
+    <div class="card">
+        <header class="card-header">
+            <p class="card-header-title">
+                <!-- {{blogPost.title}} -->
+                This is the blog post title
+            </p>
+        </header>
+    </div>
+    <div class="card-content">
+        <p class="content">
+            <!-- {{blogPost.content}} -->
+            This is the content of the blog post
+        </p>
+    </div>
+</div>
+<div class="padded container">
+    <!-- {{#each comment}} -->
+    <div class="container">
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    <!-- {{comment.user}} {{comment.timestamp}}-->
+                    Comment by this user at this time.
+                </p>
+            </header>
+        </div>
+        <div class="card-content">
+            <p class="content">
+                <!-- comment.body -->
+                THis is the comment and stuff
+            </p>
+        </div>
+    </div>
+    <hr>
+    <!-- {{/each}} -->
+</div>
+<!-- End of Post -->
+
+<!-- Dashboard -->
+<header class="sectionTitle">
+    <h1>Dashboard</h1>
+</header>
+<!-- View User's Posts -->
+<!-- {{#each blogPosts}} -->
+<div class="container editPost">
+    <div class="card">
+        <header class="card-header">
+            <p class="card-header-title">
+                <!-- {{blogPost.title}} -->
+                This is the blog post title
+            </p>
+        </header>
+    </div>
+    <div class="card-content">
+        <p class="content">
+            <!-- {{blogPost.content}} -->
+            This is the content of the blog post
+        </p>
+    </div>
+</div>
+<!-- {{/each}} -->
+<input class="buttonBlue" type="button" id="createPost" value="  Create a Post!  ">
+<!-- Create New/Edit Post Screen -->
+<div class="container">
+    <form class="column">
+        <!-- Title Input -->
+        <label class="boldLabel" for="postTitle">Post Title</label>
+        <input class="textInput" type="text" id="postTitle" name="postTitle" placeholder="Your post's title">
+    </form>
+    <form class="column">
+        <!-- Content Input -->
+        <label class="boldLabel" for="postBody">Post Body</label>
+        <textarea class="textInput" id="postBody" name="postBody" rows="4" placeholder="Write something..."></textarea>
+    </form>
+    <input class="buttonBlue" type="button" id="postSubmit" value="    Post!    ">
+</div>
+<!-- End of Dashboard -->
+
+<!-- Login Page -->
+<div class="wrapper" id="loginScreen">
+    <header class="sectionTitle">
+        <h1>Login</h1>
+    </header>
+    <div class="container">
+        <form class="column">
+            <!-- Email Input -->
+            <label class="boldLabel" for="loginEmail">Email</label>
+            <input class="textInput" type="text" id="loginEmail" name="loginEmail" placeholder="Login Email">
+        </form>
+        <form class="column">
+            <!-- Password Input -->
+            <label class="boldLabel" for="loginPassword">Password</label>
+            <input class="textInput" type="password" id="loginPassword" name="loginPassword"
+                placeholder="Login Password">
+            <div class="alignLeft">
+                <input type="checkbox" class="showPassword">Show Password
+            </div>
+        </form>
+        <input class="buttonBlue" type="button" id="loginSubmit" value="    Log In    ">
+        <hr class="smallHR">
+        <a id="signupLink">Need to register an account? Sign up here!</a>
+    </div>
+</div>
+<div class="wrapper" id="signupScreen">
+    <header class="sectionTitle">
+        <h1>Sign Up</h1>
+    </header>
+    <div class="container">
+        <form class="column">
+            <!-- Email Input -->
+            <label class="boldLabel" for="signupEmail">Email</label>
+            <input class="textInput" type="text" id="signupEmail" name="signupEmail" placeholder="Sign Up Email">
+        </form>
+        <form class="column">
+            <!-- Password Input -->
+            <label class="boldLabel" for="signupPassword">Password</label>
+            <input class="textInput" type="password" id="signupPassword" name="signupPassword"
+                placeholder="Sign Up Password">
+            <div class="alignLeft">
+                <input type="checkbox" class="showPassword">Show Password
+            </div>
+        </form>
+        <form class="column">
+            <!-- Confirm Password Input -->
+            <label class="boldLabel" for="confirmSignupPassword">Confirm Password</label>
+            <input class="textInput" type="password" id="confirmSignupPassword" name="confirmSignupPassword"
+                placeholder="Confirm Password">
+            <div class="alignLeft">
+                <input type="checkbox" class="showPassword">Show Password
+            </div>
+        </form>
+        <input class="buttonBlue" type="button" id="signupSubmit" value="    Sign Up    ">
+        <hr class="smallHR">
+        <a id="loginLink">Already have an account? Log in here!</a>
+    </div>
+</div>
+<!-- End of Login Page -->

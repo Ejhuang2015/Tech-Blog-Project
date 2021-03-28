@@ -1,0 +1,309 @@
+/* ----- 1. Content Formatting Options----- */
+/* HTML Style */
+html {
+    background: rgb(127,177,186) ;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    background: transparent;
+    color:rgb(22,58,84);
+}
+
+/* Navigation Bar */
+nav.navbar {
+    position:fixed;
+    width:100%;
+    top: 0px;
+    z-index: 2;
+    background-color: rgb(238,255,251);
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Header Style */
+.header {
+    background-color: rgb(238,255,251, 0.5);
+    padding: 10px;
+    padding-top: 20px;
+    border-bottom: solid 2px rgb(128,251,242);
+}
+
+/* Footer Style */
+.footer {
+    font-size: 16px;
+    text-align: center;
+
+    background-color: rgb(238,255,251,0.5);
+
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+
+    border-top: solid 5px;
+    border-image: radial-gradient(#80acff, rgb(128,251,242)) 1;
+}
+
+/* Main Content Container */
+.container {
+    margin: auto;
+    margin-bottom: 15px;
+    background: rgb(238,255,251,0.50);
+    border-radius: .25rem;
+    border: 2px solid rgb(128,251,242);
+    padding-bottom: 10px;
+}
+
+/* Section Header/Title */
+.sectionTitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px auto 15px auto;
+    width: 80%;
+    border: 2px solid rgb(128,251,242);
+    border-radius: 10px;
+    background-color: rgb(103, 188, 214,0.5);
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+/* Modal Content */
+.modalContent {
+    background-color: rgb(238,255,251);
+    font-size: 25px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 30px;
+    border: 4px solid rgb(128,251,242);
+    width: 80%;
+}
+  
+/* The Close Button */
+.closeModal {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.closeModal:hover,
+.closeModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ----- 2. Element Formatting Options----- */
+/* Anchor Tags */
+a {
+    color: rgb(22,58,84);
+}
+a:visited {
+    color: rgb(22, 31, 84);
+}
+a:hover, 
+a:active {
+    color: rgb(95, 163, 252);
+}
+
+/* Button Tags */
+.button {
+    padding: 12px 20px;
+    border: none;
+}
+
+.buttonBlue {
+    border-radius: 5px;
+    background-color:  rgb(224, 245, 243);
+    color: rgb(22,58,84);
+    border-color: rgb(128,251,242);
+}
+.buttonBlue:hover, 
+.buttonBlue:active {
+    background-color: rgb(32, 77, 83);
+    color: rgb(195, 230, 233);
+}
+
+.buttonRed {
+    border-radius: 5px;
+    background-color:  rgb(245, 224, 236);
+    color: rgb(84, 22, 22);
+    border-color: rgb(251, 128, 165);
+}
+.buttonRed:hover, 
+.buttonRed:active {
+    background-color: rgb(83, 32, 32);
+    color: rgb(233, 195, 195);
+}
+
+/* Text Input Tags */
+input, textarea {
+    margin: 5px 0px;
+    padding: 12px;
+    border: 1px solid rgb(128,251,242);
+    resize: vertical;
+}
+
+/* h1-6 Styling */
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Horizontal Rule */
+hr {
+    size: 2px;
+    background-color: rgb(128,251,242);
+}
+hr.smallHR {
+    width: 75%;
+    margin: 5px auto;
+}
+
+/* Fancy Text */
+p.quote {
+    font-size: 25px;
+    font-weight: normal;
+    font-family: cursive;
+    font-style: italic;
+}
+
+/* ----- 3. Basic Formatting Options----- */
+/* Center contents */
+.centered {
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+}
+/* Force content to align left */
+.alignLeft {
+    display: flex;
+    flex-direction: row;
+}
+/* Force content to align right */
+.alignRight {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Display content in Column */
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Row Reverse display */
+@media screen and (min-width: 1024px) {
+    .reverseRow {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+/* Bottom border underline */
+.underlined {
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    border-bottom: solid 1px rgb(128,251,242);
+}
+
+/* Hide content */
+.hidden {
+    display: none;
+}
+
+/* Show content */
+.appear {
+    display: block;
+}
+
+/* Display content in a single line */
+.singleLine {
+    display: initial;
+}
+
+/* Add in a border */
+.bordered {
+    border: 2px solid rgb(128,251,242);
+    padding: 2px;
+}
+
+/* Curve the border */
+.borderCurved {
+    border-radius: 25px;
+}
+
+/* Text Input Form Line */
+.textInput {
+    width: 100%;
+}
+
+/* Bold and Eyecatching Label */
+.boldLabel {
+    font-weight: bold;
+    font-size: 20px;
+}
+/* Add some right margin to checkbox */
+input.showPassword {
+    margin-right: 5px;
+}
+
+/* Add all around padding */
+.padded {
+    padding: 10px;
+}
+
+/* Add pointer cursor style */
+.linkDiv {
+    cursor: pointer;
+}
+
+.truncateText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wrapText {
+    word-wrap: break-word;
+}
+
+/* Notes
+border-color: rgb(128,251,242) //80FBF2
+Text color: rgb(22,58,84); //#163A54
+background-color: rgb(238,255,251,0.5); //EEFFFB
+
+Hover color: rgb(95, 163, 252); //5FA3FC
+
+Footer Gradient
+border-image: radial-gradient(#80acff, rgb(128,251,242)) 1; 
+
+Background Gradient (Top Left to bottom right)
+#B8DCC0,#7FB1B8,#64647E
+*/

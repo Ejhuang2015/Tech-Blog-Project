@@ -9,7 +9,6 @@ const Auth0Strategy = require("passport-auth0");
 const helpers = require('./utils/helpers');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
-require("dotenv").config();
 
 // App Variables
 // =============================================================

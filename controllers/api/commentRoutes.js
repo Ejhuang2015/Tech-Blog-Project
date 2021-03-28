@@ -1,9 +1,7 @@
 // Dependencies
 // =============================================================
 const router = require('express').Router();
-const { Post, User, Comment } = require('../../models');
-const { route } = require('../getRoutes');
-const withAuth = require('../../utils/auth');
+const { Comment } = require('../../models');
 
 // Get (Read)
 // =============================================================

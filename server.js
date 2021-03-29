@@ -26,6 +26,11 @@ const sess = {
   saveUninitialized: false
 };
 
+if (app.get("env") === "production") {
+  // Serve secure cookies, requires HTTPS
+  session.cookie.secure = true; 
+}
+
 // Passport Config
 // =============================================================
 const strategy = new Auth0Strategy(

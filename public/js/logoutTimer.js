@@ -1,7 +1,9 @@
 // 4 minutes before warning appears
 const timeoutWarning = 240000;
+// const timeoutWarning = 10000;
 // 1 minute after warning appears, user is logged out.
 const timeoutNow = 60000;
+// const timeoutNow = 5000;
 // Logout URL
 var re = new RegExp(/^.*\//);
 const baseURL = re.exec(window.location.href);

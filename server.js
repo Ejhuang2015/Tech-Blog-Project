@@ -27,6 +27,7 @@ const sess = {
 };
 
 if (app.get("env") === "production") {
+  app.set('trust proxy', 1)
   // Serve secure cookies, requires HTTPS
   session.cookie.secure = true;
 }

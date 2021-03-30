@@ -137,12 +137,7 @@ router.get("/logout", (req, res) => {
   if (port !== undefined && port !== 80 && port !== 443) {
     returnTo = process.env.NODE_ENV === "production" ? `${returnTo}/` : `${returnTo}:${port}/`;
   }
-
-  if (process.env.NODE_ENV === 'production') {
-    app.set('trust proxy', 1); // trust first proxy
-    sess.cookie.secure = true; // serve secure cookies, requires https
-  }
-
+  
   // Logout through auth0 and go to log out page
   const logoutURL = new URL(`https://${process.env.AUTH0_DOMAIN}/v2/logout`);
   const searchString = querystring.stringify({

@@ -9,6 +9,7 @@ const Auth0Strategy = require("passport-auth0");
 const helpers = require('./utils/helpers');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // App Variables
 // =============================================================
@@ -23,7 +24,10 @@ const sess = {
   secret: process.env.SESSION_SECRET,
   cookie: {},
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  store: new SequelizeStore({
+    db: sequelize
+  })
 };
 
 if (app.get("env") === "production") {
@@ -66,7 +70,7 @@ app.use(session(sess));
 
 passport.use(strategy);
 app.use(passport.initialize());
-app.use(passport.sess());
+app.use(passport.session());
 
 passport.serializeUser((user, done) => {
   done(null, user);

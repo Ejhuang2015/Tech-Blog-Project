@@ -66,7 +66,7 @@ app.use(session(sess));
 
 passport.use(strategy);
 app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.sess());
 
 passport.serializeUser((user, done) => {
   done(null, user);

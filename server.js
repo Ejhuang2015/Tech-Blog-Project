@@ -33,6 +33,8 @@ const sess = {
 if (app.get("env") === "production") {
   // Serve secure cookies, requires HTTPS
   sess.cookie.secure = true; 
+  sess.proxy = true
+  app.set('trust proxy', 1)
 }
 
 // Passport Config

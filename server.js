@@ -28,7 +28,7 @@ const sess = {
 
 if (app.get("env") === "production") {
   // Serve secure cookies, requires HTTPS
-  session.cookie.secure = true; 
+  sess.cookie.secure = true; 
 }
 
 // Passport Config

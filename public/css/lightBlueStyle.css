@@ -162,7 +162,6 @@ input, textarea {
     margin: 5px 0px;
     padding: 12px;
     border: 1px solid rgb(128,251,242);
-    resize: vertical;
 }
 
 /* h1-6 Styling */

@@ -3,6 +3,7 @@
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
+const Image = require('./Image');
 
 // Joins
 // =============================================================
@@ -33,6 +34,16 @@ Post.hasMany(Comment, {
 });
 
 Comment.belongsTo(Post, {
+  foreignKey: 'post_id'
+});
+
+// A post can have many comments but the comment can only be in one post.
+Post.hasOne(Image, {
+  foreignKey: 'post_id',
+  onDelete: 'CASCADE'
+});
+
+Image.belongsTo(Post, {
   foreignKey: 'post_id'
 });
 

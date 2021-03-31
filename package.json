@@ -10,6 +10,7 @@
     "express-handlebars": "^5.2.1",
     "express-openid-connect": "^2.3.0",
     "express-session": "^1.17.1",
+    "multer": "^1.4.2",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-auth0": "^1.4.0",

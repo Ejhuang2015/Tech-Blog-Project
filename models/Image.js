@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Post extends Model {}
+class Image extends Model {}
 
-Post.init(
+Image.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,22 +11,14 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    name: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    content: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    image: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    user_id: {
+    post_id: {
         type: DataTypes.STRING,
         references: {
-          model: 'user',
+          model: 'post',
           key: 'id',
         },
       },
@@ -36,9 +28,9 @@ Post.init(
     timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: 'image',
     paranoid: true
   }
 );
 
-module.exports = Post;
+module.exports = Image;

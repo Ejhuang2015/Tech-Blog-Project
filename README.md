@@ -12,7 +12,6 @@ This is a practice application on full-stack web development. Created using Node
 * [License](#license)
 
 # Usage
-Currently broken... Could not set up properly to Heroku...
 To use the application, view the deployed application on [Heroku here](https://limitless-mountain-67002.herokuapp.com/).
 
 # Contributors
